@@ -1,16 +1,18 @@
 import React from 'react'
-import { View, Text, Stylesheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 const HomeScreen = () => {
     return (
         <View>
-            <Text>Test</Text>
+            <Text style={styles.homeFont}>Test</Text>
         </View>
     )
 }
 
-const styles = Stylesheet.create({
-
+const styles = StyleSheet.create({
+    homeFont: {
+        fontSize: 45
+    }
 })
 
 export default HomeScreen
