@@ -10,7 +10,9 @@ const SearchBar = () => {
 }
 
 const styles= StyleSheet.create({
-
+    background: {
+        backgroundColor: '#F0EEEE'
+    }
 })
 
 export default SearchBar
