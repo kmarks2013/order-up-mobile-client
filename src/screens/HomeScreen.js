@@ -6,7 +6,6 @@ const HomeScreen = () => {
 
     const [term, setTerm] = useState('')
 
-
     const onTermChange = (newTerm) => {
         setTerm(newTerm)
     }
