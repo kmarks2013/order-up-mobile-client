@@ -10,6 +10,10 @@ const HomeScreen = () => {
         setTerm(newTerm)
     }
 
+    const onTermSubmit = () => {
+        console.log('submitted', term)
+    }
+
     return (
         <View>
             <SearchBar term={term} onTermChange={onTermChange}/>
