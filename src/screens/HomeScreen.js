@@ -6,9 +6,12 @@ const HomeScreen = () => {
 
     const [term, setTerm] = useState('')
 
-
     const onTermChange = (newTerm) => {
         setTerm(newTerm)
+    }
+
+    const onTermSubmit = () => {
+        console.log('submitted', term)
     }
 
     return (
