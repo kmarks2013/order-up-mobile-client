@@ -8,7 +8,7 @@ const HomeScreen = () => {
 
     return (
         <View>
-            <SearchBar/>
+            <SearchBar term={term} onTermChange={newTerm => setTerm(newTerm)}/>
             <Text style={styles.homeFont}>Test</Text>
         </View>
     )
