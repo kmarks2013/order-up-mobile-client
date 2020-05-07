@@ -30,7 +30,8 @@ const styles= StyleSheet.create({
     },
     iconStyle:{
         fontSize: 35,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        marginHorizontal: 15
     }
 })
 
