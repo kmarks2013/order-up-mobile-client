@@ -6,6 +6,11 @@ const HomeScreen = () => {
 
     const [term, setTerm] = useState('')
 
+
+    // const onTermChange = (newTerm) => {
+    //     setTerm(newTerm)
+    // }
+
     return (
         <View>
             <SearchBar term={term} onTermChange={newTerm => setTerm(newTerm)}/>
