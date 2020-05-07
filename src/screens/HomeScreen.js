@@ -16,7 +16,11 @@ const HomeScreen = () => {
 
     return (
         <View>
-            <SearchBar term={term} onTermChange={onTermChange}/>
+            <SearchBar
+                term={term}
+                onTermChange={onTermChange}
+                onTermSubmit={onTermSubmit}
+            />
             <Text style={styles.homeFont}>Test</Text>
             <Text>{term}</Text>
         </View>
