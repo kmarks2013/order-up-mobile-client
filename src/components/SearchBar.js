@@ -26,7 +26,8 @@ const styles= StyleSheet.create({
     inputStyle:{
         borderColor: 'black',
         borderWidth: 1,
-        flex: 1
+        flex: 1,
+        fontSize: 18
     },
     iconStyle:{
         fontSize: 35,
