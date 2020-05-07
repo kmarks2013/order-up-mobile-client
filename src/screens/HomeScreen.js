@@ -7,9 +7,9 @@ const HomeScreen = () => {
     const [term, setTerm] = useState('')
 
 
-    // const onTermChange = (newTerm) => {
-    //     setTerm(newTerm)
-    // }
+    const onTermChange = (newTerm) => {
+        setTerm(newTerm)
+    }
 
     return (
         <View>
