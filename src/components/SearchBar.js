@@ -5,8 +5,8 @@ import { AntDesign } from '@expo/vector-icons';
 const SearchBar = () => {
     return (
         <View style={styles.background}>
-            <AntDesign name="search1" size={24} color="black" />
-            <Text>Search Bar</Text>
+            <AntDesign name="search1" size={30} color="black" />
+            <Text></Text>
         </View>
     )
 }
