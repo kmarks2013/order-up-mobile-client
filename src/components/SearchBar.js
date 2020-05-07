@@ -24,8 +24,6 @@ const styles= StyleSheet.create({
         flexDirection: "row"
     },
     inputStyle:{
-        borderColor: 'black',
-        borderWidth: 1,
         flex: 1,
         fontSize: 18
     },
