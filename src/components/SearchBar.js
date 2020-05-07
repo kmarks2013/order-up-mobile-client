@@ -1,17 +1,20 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, TextInput, StyleSheet } from 'react-native'
+import { AntDesign } from '@expo/vector-icons';
 
 const SearchBar = () => {
     return (
         <View style={styles.background}>
-            <Text>Search Bar</Text>
+            <AntDesign name="search1" size={30} color="black" />
+            <TextInput />
         </View>
     )
 }
 
 const styles= StyleSheet.create({
     background: {
-        backgroundColor: '#F0EEEE',
+        backgroundColor: '#B2B2B2',
+        // backgroundColor: '#F0EEEE',
         height: 50,
         borderRadius: 5,
         marginHorizontal: 15
