@@ -7,13 +7,13 @@ const HomeScreen = () => {
     const [term, setTerm] = useState('')
 
 
-    // const onTermChange = (newTerm) => {
-    //     setTerm(newTerm)
-    // }
+    const onTermChange = (newTerm) => {
+        setTerm(newTerm)
+    }
 
     return (
         <View>
-            <SearchBar term={term} onTermChange={newTerm => setTerm(newTerm)}/>
+            <SearchBar term={term} onTermChange={onTermChange}/>
             <Text style={styles.homeFont}>Test</Text>
             <Text>{term}</Text>
         </View>
