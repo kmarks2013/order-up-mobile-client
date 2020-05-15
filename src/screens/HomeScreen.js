@@ -36,6 +36,9 @@ const HomeScreen = () => {
     //BAD CODE Call search api when component is first rendered.
     // searchApi('pasta')
     //causes an infinite loops
+    useEffect(()=> {
+        searchApi('pasta')
+    })
 
     return (
         <View>
@@ -45,7 +48,7 @@ const HomeScreen = () => {
                 onTermSubmit={onTermSubmit}
             />
             <Text style={styles.homeFont}>Test</Text>
-            {errorMessage.length ? <Text>{errorMessage}</Text>: null}
+            {errorMessage ? <Text>{errorMessage}</Text>: null}
             <Text>We have found {results.length} resturants</Text>
         </View>
     )
