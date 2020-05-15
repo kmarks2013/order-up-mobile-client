@@ -5,7 +5,7 @@ import yelp from '../api/yelp'
 
 const HomeScreen = () => {
     const [term, setTerm] = useState('')
-    const [results, setResuts] = useState([])
+    const [results, setResults] = useState([])
 
     const searchApi = () => {
        const response = await yelp.get('/search',{
@@ -15,7 +15,7 @@ const HomeScreen = () => {
            }
            //params adds the string paramaters listed in the documentation
        })
-       setResutls(response.data.businesses)
+       setResults(response.data.businesses)
     }
     const onTermChange = (newTerm) => {
         setTerm(newTerm)
