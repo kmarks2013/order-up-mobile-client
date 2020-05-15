@@ -6,6 +6,7 @@ import yelp from '../api/yelp'
 const HomeScreen = () => {
     const [term, setTerm] = useState('')
     const [results, setResults] = useState([])
+    const [errorMessage, setErrorMessage] = useState('')
 
     const searchApi = async () => {
        const response = await yelp.get('/search',{
