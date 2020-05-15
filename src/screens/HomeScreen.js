@@ -5,25 +5,6 @@ import yelp from '../api/yelp'
 
 const HomeScreen = () => {
     const [term, setTerm] = useState('')
-    const [results, setResults] = useState([])
-    const [errorMessage, setErrorMessage] = useState('')
-
-    const searchApi = async (searchTerm) => {
-        console.log("hi there")
-        try {
-            const response = await yelp.get('/search',{
-                params: {
-                    limit:50,
-                    term: searchTerm,
-                    location: 'san jose'
-                }
-            })
-            setResults(response.data.businesses)
-        } catch (err) {
-            setErrorMessage('Oops! Something went wrong!')
-            console.log(err)
-        }
-    }
 
     const onTermChange = (newTerm) => {
         setTerm(newTerm)
@@ -32,13 +13,6 @@ const HomeScreen = () => {
     const onTermSubmit = () => {
         searchApi(term)
     }
-
-    //BAD CODE Call search api when component is first rendered.
-    // searchApi('pasta')
-    //causes an infinite loops
-    useEffect(()=> {
-        searchApi('pasta')
-    })
 
     return (
         <View>
