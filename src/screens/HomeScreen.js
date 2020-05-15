@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import SearchBar from '../components/SearchBar'
 import yelp from '../api/yelp'
@@ -9,6 +9,7 @@ const HomeScreen = () => {
     const [errorMessage, setErrorMessage] = useState('')
 
     const searchApi = async (searchTerm) => {
+        console.log("hi there")
         try {
             const response = await yelp.get('/search',{
                 params: {
@@ -20,6 +21,7 @@ const HomeScreen = () => {
             setResults(response.data.businesses)
         } catch (err) {
             setErrorMessage('Oops! Something went wrong!')
+            console.log(err)
         }
     }
 
