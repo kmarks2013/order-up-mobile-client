@@ -4,7 +4,6 @@ import SearchBar from '../components/SearchBar'
 import yelp from '../api/yelp'
 
 const HomeScreen = () => {
-
     const [term, setTerm] = useState('')
     const [results, setResuts] = useState([])
 
