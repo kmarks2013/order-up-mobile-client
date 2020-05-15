@@ -17,6 +17,7 @@ const HomeScreen = () => {
            //params adds the string paramaters listed in the documentation
        })
        setResults(response.data.businesses)
+    //    console.log('submitted', results)
     }
     const onTermChange = (newTerm) => {
         setTerm(newTerm)
@@ -24,7 +25,6 @@ const HomeScreen = () => {
 
     const onTermSubmit = () => {
         searchApi()
-        console.log('submitted', results)
     }
 
     return (
