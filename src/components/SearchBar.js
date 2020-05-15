@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, TextInput, StyleSheet } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
+import yelp from '../api/yelp'
 
 const SearchBar = ({term, onTermChange, onTermSubmit}) => {
     return (
