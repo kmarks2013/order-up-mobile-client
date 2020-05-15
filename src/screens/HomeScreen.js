@@ -24,12 +24,13 @@ const HomeScreen = () => {
             setErrorMessage('Oops! Something went wrong!')
         }
     }
+
     const onTermChange = (newTerm) => {
         setTerm(newTerm)
     }
 
     const onTermSubmit = () => {
-        searchApi()
+        searchApi(term)
     }
 
     return (
