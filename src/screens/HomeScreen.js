@@ -33,6 +33,10 @@ const HomeScreen = () => {
         searchApi(term)
     }
 
+    //BAD CODE Call search api when component is first rendered.
+    // searchApi('pasta')
+    //causes an infinite loops
+
     return (
         <View>
             <SearchBar
