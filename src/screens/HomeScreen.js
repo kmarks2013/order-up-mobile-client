@@ -16,10 +16,8 @@ const HomeScreen = () => {
                     term: searchTerm,
                     location: 'san jose'
                 }
-                //params adds the string paramaters listed in the documentation
             })
             setResults(response.data.businesses)
-            //    console.log('submitted', results)
         } catch (err) {
             setErrorMessage('Oops! Something went wrong!')
         }
