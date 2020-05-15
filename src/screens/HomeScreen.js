@@ -7,11 +7,12 @@ const HomeScreen = () => {
     const [term, setTerm] = useState('')
     const [results, setResults] = useState([])
 
-    const searchApi = () => {
+    const searchApi = async () => {
        const response = await yelp.get('/search',{
            params: {
                limit:50,
-               term: term
+               term: term,
+               location: 'san jose'
            }
            //params adds the string paramaters listed in the documentation
        })
