@@ -7,6 +7,16 @@ const HomeScreen = () => {
     const [term, setTerm] = useState('')
     const [results, setResuts] = useState([])
 
+    const searchApi = () => {
+       const response = await yelp.get('/search',{
+           params: {
+               limit:50,
+               term: term
+           }
+           //params adds the string paramaters listed in the documentation
+       })
+       setResutls(response.data.businesses)
+    }
     const onTermChange = (newTerm) => {
         setTerm(newTerm)
     }
