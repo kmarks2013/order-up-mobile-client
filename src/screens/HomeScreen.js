@@ -9,16 +9,20 @@ const HomeScreen = () => {
     const [errorMessage, setErrorMessage] = useState('')
 
     const searchApi = async () => {
-       const response = await yelp.get('/search',{
-           params: {
-               limit:50,
-               term: term,
-               location: 'san jose'
-           }
-           //params adds the string paramaters listed in the documentation
-       })
-       setResults(response.data.businesses)
-    //    console.log('submitted', results)
+        try {
+            const response = await yelp.get('/search',{
+                params: {
+                    limit:50,
+                    term: term,
+                    location: 'san jose'
+                }
+                //params adds the string paramaters listed in the documentation
+            })
+            setResults(response.data.businesses)
+            //    console.log('submitted', results)
+        } catch (err) {
+            setErrorMessage('Oops! Something went wrong!')
+        }
     }
     const onTermChange = (newTerm) => {
         setTerm(newTerm)
