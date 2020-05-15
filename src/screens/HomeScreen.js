@@ -23,7 +23,8 @@ const HomeScreen = () => {
     }
 
     const onTermSubmit = () => {
-        console.log('submitted', term)
+        searchApi()
+        console.log('submitted', results)
     }
 
     return (
