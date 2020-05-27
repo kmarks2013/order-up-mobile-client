@@ -18,6 +18,13 @@ const HomeScreen = () => {
 
     console.log(results)
 
+    const filterResultsByPrice = (price) => {
+        // price === "$" || '$$' || '$$$'
+        return results.filter(result => {
+            return result.price === price
+        })
+     }
+
     return (
         <View>
             <SearchBar
