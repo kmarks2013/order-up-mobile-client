@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import SearchBar from '../components/SearchBar'
 import useResults from '../hooks/useResults'
+import ResultsList from '../components/ResultsList'
 
 const HomeScreen = () => {
     const [term, setTerm] = useState('')
@@ -25,6 +26,10 @@ const HomeScreen = () => {
             <Text style={styles.homeFont}>Test</Text>
             {errorMessage ? <Text>{errorMessage}</Text>: null}
             <Text>We have found {results.length} resturants</Text>
+            <ResultsList title='Cost Effective'/>
+            <ResultsList title='Bit Pricier'/>
+            <ResultsList title='Big Spender'/>
+
         </View>
     )
 }
