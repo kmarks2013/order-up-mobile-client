@@ -16,6 +16,8 @@ const HomeScreen = () => {
         searchApi(term)
     }
 
+    console.log(results)
+
     return (
         <View>
             <SearchBar
