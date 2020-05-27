@@ -35,9 +35,9 @@ const HomeScreen = () => {
             {/* <Text style={styles.homeFont}>Test</Text> */}
             {errorMessage ? <Text>{errorMessage}</Text>: null}
             <Text>We have found {results.length} resturants</Text>
-            <ResultsList title='Cost Effective'/>
-            <ResultsList title='Bit Pricier'/>
-            <ResultsList title='Big Spender'/>
+            <ResultsList results={filterResultsByPrice('$')} title='Cost Effective'/>
+            <ResultsList results={filterResultsByPrice('$$')} title='Bit Pricier'/>
+            <ResultsList results={filterResultsByPrice('$$$')} title='Big Spender'/>
 
         </View>
     )
