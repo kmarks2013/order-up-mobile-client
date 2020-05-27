@@ -27,7 +27,7 @@ export default () => {
     //causes an infinite loops
     useEffect(()=> {
         searchApi('pasta')
-    })
+    }, [])
 
     return [searchApi, results, errorMessage]
 } 
