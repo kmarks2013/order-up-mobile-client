@@ -16,6 +16,15 @@ const HomeScreen = () => {
         searchApi(term)
     }
 
+    console.log(results)
+
+    const filterResultsByPrice = (price) => {
+        // price === "$" || '$$' || '$$$'
+        return results.filter(result => {
+            return result.price === price
+        })
+     }
+
     return (
         <View>
             <SearchBar
@@ -23,12 +32,12 @@ const HomeScreen = () => {
                 onTermChange={onTermChange}
                 onTermSubmit={onTermSubmit}
             />
-            <Text style={styles.homeFont}>Test</Text>
+            {/* <Text style={styles.homeFont}>Test</Text> */}
             {errorMessage ? <Text>{errorMessage}</Text>: null}
             <Text>We have found {results.length} resturants</Text>
-            <ResultsList title='Cost Effective'/>
-            <ResultsList title='Bit Pricier'/>
-            <ResultsList title='Big Spender'/>
+            <ResultsList results={filterResultsByPrice('$')} title='Cost Effective'/>
+            <ResultsList results={filterResultsByPrice('$$')} title='Bit Pricier'/>
+            <ResultsList results={filterResultsByPrice('$$$')} title='Big Spender'/>
 
         </View>
     )
