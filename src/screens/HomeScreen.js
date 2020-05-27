@@ -26,9 +26,10 @@ const HomeScreen = () => {
             <Text style={styles.homeFont}>Test</Text>
             {errorMessage ? <Text>{errorMessage}</Text>: null}
             <Text>We have found {results.length} resturants</Text>
-            <ResultsList />
-            <ResultsList />
-            <ResultsList />
+            <ResultsList title='Cost Effective'/>
+            <ResultsList title='Bit Pricier'/>
+            <ResultsList title='Big Spender'/>
+
         </View>
     )
 }
