@@ -8,7 +8,8 @@ const RestaurantDetail = ({restaurant}) => {
             source={{uri: restaurant.image_url}}
             style={styles.image}
             />
-            <Text> {restaurant.name} </Text>
+            <Text style={styles.name}> {restaurant.name} </Text>
+            <Text> {restaurant.rating} Stars, {restaurant.review_count} Reviews</Text>
         </View>
     )
 }
@@ -21,5 +22,8 @@ const styles = StyleSheet.create({
         height: 120,
         borderRadius: 4
     },
-    name: {}
+    name: {
+        fontWeight: "bold",
+        fontSize: 16
+    }
 })
