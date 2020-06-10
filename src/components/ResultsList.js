@@ -24,6 +24,7 @@ export default ResultsList
 
 const styles = StyleSheet.create({
     titleStyle: {
+        marginLeft: 15,
         fontSize: 18,
         fontWeight: "bold"
     }

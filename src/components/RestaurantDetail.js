@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 
 const RestaurantDetail = ({restaurant}) => {
     return (
-        <View>
+        <View style={styles.container}>
             <Image
             source={{uri: restaurant.image_url}}
             style={styles.image}
@@ -17,6 +17,9 @@ const RestaurantDetail = ({restaurant}) => {
 export default RestaurantDetail
 
 const styles = StyleSheet.create({
+    container: {
+        marginLeft: 15
+    },
     image: {
         width:250,
         height: 120,
