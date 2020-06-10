@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native'
 import RestaurantDetail from './RestaurantDetail'
+import {withNavigation} from 'react-navigation'
 
 
 const ResultsList = ({title, results, navigation}) => {
@@ -16,7 +17,7 @@ const ResultsList = ({title, results, navigation}) => {
                 renderItem={({item}) => {
                     return (
                         <TouchableOpacity
-                            onPress={() => navigation.navigate("Restaurant")}
+                            onPress={() => navigation.navigate("Restaurant", {id: item.id})}
                         >
                             <RestaurantDetail restaurant={item} />
                         </TouchableOpacity>
