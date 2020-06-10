@@ -24,7 +24,7 @@ export default () => {
 
     //BAD CODE Call search api when component is first rendered.
     // searchApi('pasta')
-    //causes an infinite loops
+    //the above line an infinite loop^
     useEffect(()=> {
         searchApi('pasta')
     }, [])
