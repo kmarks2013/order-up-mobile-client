@@ -4,7 +4,7 @@ import SearchBar from '../components/SearchBar'
 import useResults from '../hooks/useResults'
 import ResultsList from '../components/ResultsList'
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
     const [term, setTerm] = useState('')
     const [searchApi, results, errorMessage] = useResults()
 
@@ -16,7 +16,6 @@ const HomeScreen = () => {
         searchApi(term)
     }
 
-    console.log(results)
 
     const filterResultsByPrice = (price) => {
         // price === "$" || '$$' || '$$$'
