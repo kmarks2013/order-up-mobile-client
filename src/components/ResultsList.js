@@ -23,8 +23,12 @@ const ResultsList = ({title, results}) => {
 export default ResultsList
 
 const styles = StyleSheet.create({
+    container:{
+        marginBottom: 10
+    },
     titleStyle: {
         marginLeft: 15,
+        marginBottom: 5,
         fontSize: 18,
         fontWeight: "bold"
     }
