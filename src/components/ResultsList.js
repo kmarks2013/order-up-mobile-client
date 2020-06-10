@@ -29,7 +29,7 @@ const ResultsList = ({title, results, navigation}) => {
     )
 }
 
-export default ResultsList
+export default withNavigation(ResultsList)
 
 const styles = StyleSheet.create({
     container:{
