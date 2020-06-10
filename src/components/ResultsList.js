@@ -5,7 +5,7 @@ import RestaurantDetail from './RestaurantDetail'
 
 const ResultsList = ({title, results}) => {
     return (
-        <View>
+        <View style={styles.container}>
             <Text style={styles.titleStyle}>{title}</Text>
             {/* <Text> Results: {results.length}</Text> */}
             <FlatList
