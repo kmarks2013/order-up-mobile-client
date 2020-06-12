@@ -12,7 +12,7 @@ export default () => {
                 params: {
                     limit:50,
                     term: searchTerm,
-                    location: 'san jose'
+                    location: 'new york'
                 }
             })
             setResults(response.data.businesses)
@@ -24,7 +24,7 @@ export default () => {
 
     //BAD CODE Call search api when component is first rendered.
     // searchApi('pasta')
-    //causes an infinite loops
+    //the above line an infinite loop^
     useEffect(()=> {
         searchApi('pasta')
     }, [])
